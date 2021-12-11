@@ -17,7 +17,8 @@ public:
 	
 	double get_y() const
 	{
-		return y;
+		return y; 
+
 
 	}
 
