@@ -31,17 +31,40 @@ public:
 		this->y = y;
 	}
 
+	Point()
+	{
+		x = y = 0;
+		cout << "DefaultConstructor:" << this << endl;
+	}
+	Point(double x, double y) 
+	{
+		this->x = x;
+		this->y = y;
+		cout << "Constrictor" << this << endl;;
+	}
+	~Point()
+	{
+		cout << "DisConstructor:" << this << endl;
+	}
+	// Metods:
+	void print()const
+	{
+		cout << "X = " << x << "\t Y = " << y << endl;
+	}
 };
 
 //#define Struct_POint
 
 void main() {
 	setlocale(LC_ALL, "");
-	Point A;
-	A.set_x(2);
-	A.set_y(3);
-
-	cout << A.get_x() << tab << A.get_y() << endl;
+	Point A; // DefaultConstractor
+	double x, y;
+	/*A.set_x(2);
+	A.set_y(3);*/
+	//cout << A.get_x() << tab << A.get_y() << endl;
+	A.print();
+	Point B(22, 33);
+	B.print();
 
 #ifdef Struct_POint
 	//type name;
