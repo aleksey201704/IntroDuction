@@ -1,73 +1,34 @@
 #include <iostream>
-
+#include"Class_Fraction.h"
+#include "Fraction_Operators.h"
 using namespace std;
-
-class Fraction
-{
-	
-public:
-	int Numerator;
-	int Denominator;
-
-	// -----------Constructors----------------
-	Fraction()
-	{
-
-	}
-
-	Fraction(int Numerator, int Denominator)
-	{
-		this->Numerator=Numerator;
-		this->Denominator=Denominator;
-		cout << "Адрес конструтора = " << this << endl;
-		cout << "\n------------------------------------\n";
-	}
-
-	// Сopying the constructor
-
-	/*Fraction(const Fraction& other) 
-	{
-		this->Numerator = other.Numerator;
-		this->Denominator = other.Denominator;
-		cout << "Адрес Копии конструтора = " << this << endl;
-		cout << "\n------------------------------------\n";
-	}*/
-
-	~Fraction()
-	{
-		
-		cout << "Адрес Десконструтора = " << this << endl;
-		cout << "\n------------------------------------\n";
-	}
-
-	// Methods
-
-	void Print()const
-	{
-		cout<< Numerator << "/" << Denominator<<endl ;
-	}
-};
-
-Fraction operator+(const Fraction& left, const Fraction& right)
-{
-	Fraction result;
-	result.Numerator = left.Numerator + right.Numerator;
-	result.Denominator = right.Denominator + left.Denominator;
-	return result;
-}
 
 void main() 
 {
 	setlocale(LC_ALL, "");
 
-	Fraction A(10,14) ;
-	Fraction B(10,25);
-	Fraction C = A + B;
-	//A = B;
+	Fraction A(3,7) ;
+	Fraction B(4,8);
+	Fraction C,D;
+	
 	A.Print();
 	B.Print();
-	C.Print();
-
 	
-
+	C = A + B;
+	cout << "Сложение дробей = ";
+	C.Print();
+	/*D.reduce(C);
+	D.Print();
+	*/
+			
+	C = A * B;
+	cout << "Умножение дробей = ";
+	C.Print();
+	
+	C = A / B;
+	cout << "Деление дробей = ";
+	C.Print();
+	
+	(A == B) ? cout << "Равные дроби" : cout << "Не равные дроби";
+	
 }
