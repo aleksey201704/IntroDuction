@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include<iostream>
 using namespace std;
 
@@ -22,24 +22,24 @@ public:
 	{
 		this->Numerator = Numerator;
 		this->Denominator = Denominator;
-		/*cout << "Àäðåñ êîíñòðóòîðà = " << this << endl;
+		/*cout << "ÐÐ´Ñ€ÐµÑ ÐºÐ¾Ð½ÑÑ‚Ñ€ÑƒÑ‚Ð¾Ñ€Ð° = " << this << endl;
 		cout << "\n------------------------------------\n";*/
 	}
 
-	// Ñopying the constructor
+	// Ð¡opying the constructor
 
 	Fraction(const Fraction& other)
 	{
 		Numerator = other.Numerator;
 		Denominator = other.Denominator;
-		/*cout << "Àäðåñ Êîïèè êîíñòðóòîðà = " << this << endl;
+		/*cout << "ÐÐ´Ñ€ÐµÑ ÐšÐ¾Ð¿Ð¸Ð¸ ÐºÐ¾Ð½ÑÑ‚Ñ€ÑƒÑ‚Ð¾Ñ€Ð° = " << this << endl;
 		cout << "\n------------------------------------\n";*/
 	}
 
 	~Fraction()
 	{
 
-		/*cout << "Àäðåñ Äåñêîíñòðóòîðà = " << this << endl;
+		/*cout << "ÐÐ´Ñ€ÐµÑ Ð”ÐµÑÐºÐ¾Ð½ÑÑ‚Ñ€ÑƒÑ‚Ð¾Ñ€Ð° = " << this << endl;
 		cout << "\n------------------------------------\n";*/
 	}
 
@@ -53,7 +53,7 @@ public:
 		Correct.Denominator = other.Denominator;
 		if (Correct.Denominator > Correct.Numerator)
 		{
-			cout << "Ïðàâèëüíàÿ äðîáü" << endl;
+			cout << "ÐŸÑ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð°Ñ Ð´Ñ€Ð¾Ð±ÑŒ" << endl;
 		}
 		else if (Correct.Numerator % Correct.Denominator != 0)
 		{
@@ -69,9 +69,9 @@ public:
 		int KratnoeD = 0,
 			KratnoeN = 0,
 			KratnoeS = 0;
-		// Íàéáîëüøèé îáùèé äåëèòåëü
-		KratnoeD = result.Denominator;
-		KratnoeN = result.Numerator;
+		// ÐÐ°Ð¹Ð±Ð¾Ð»ÑŒÑˆÐ¸Ð¹ Ð¾Ð±Ñ‰Ð¸Ð¹ Ð´ÐµÐ»Ð¸Ñ‚ÐµÐ»ÑŒ
+		KratnoeD = other.Denominator;
+		KratnoeN = other.Numerator;
 		if (KratnoeD > KratnoeN)
 		{
 			KratnoeS = KratnoeD;
@@ -91,6 +91,8 @@ public:
 		}
 		result.Numerator = other.Numerator / KratnoeS;
 		result.Denominator = other.Denominator / KratnoeS;
+		Numerator = result.Numerator;
+		Denominator = result.Denominator;
 		return result;
 	}
 

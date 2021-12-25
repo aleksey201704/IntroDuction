@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include"Class_Fraction.h"
 #include "Fraction_Operators.h"
 using namespace std;
@@ -13,22 +13,24 @@ void main()
 	
 	A.Print();
 	B.Print();
-	
+	cout << "\n-----------------------\n";
+
 	C = A + B;
-	cout << "Ñëîæåíèå äðîáåé = ";
+	cout << "Ð¡Ð»Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð´Ñ€Ð¾Ð±ÐµÐ¹ = ";
 	C.Print();
-	/*D.reduce(C);
-	D.Print();
-	*/
-			
+	
+	cout << "Ð¡Ð¾ÐºÑ€Ð°Ñ‰ÐµÐ½Ð¸Ðµ Ð´Ñ€Ð¾Ð±Ð¸ = "; C.reduce(C);
+	C.Print();
+	cout << "\n-----------------------\n";
+	
 	C = A * B;
-	cout << "Óìíîæåíèå äðîáåé = ";
+	cout << "Ð£Ð¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð´Ñ€Ð¾Ð±ÐµÐ¹ = ";
 	C.Print();
 	
 	C = A / B;
-	cout << "Äåëåíèå äðîáåé = ";
+	cout << "Ð”ÐµÐ»ÐµÐ½Ð¸Ðµ Ð´Ñ€Ð¾Ð±ÐµÐ¹ = ";
 	C.Print();
-	
-	(A == B) ? cout << "Ðàâíûå äðîáè" : cout << "Íå ðàâíûå äðîáè";
+	cout << "\n-----------------------\n";
+	(A == B) ? cout << "Ð Ð°Ð²Ð½Ñ‹Ðµ Ð´Ñ€Ð¾Ð±Ð¸" : cout << "ÐÐµ Ñ€Ð°Ð²Ð½Ñ‹Ðµ Ð´Ñ€Ð¾Ð±Ð¸";
 	
 }
