@@ -19,8 +19,12 @@ void main()
 	cout << "Сложение дробей = ";
 	C.Print();
 	
-	cout << "Сокращение дроби = "; C.reduce(C);
+	cout << "Сокращение дроби = ";
+	C.reduce(C);
 	C.Print();
+
+	C.to_proper(C);
+	
 	cout << "\n-----------------------\n";
 	
 	C = A * B;

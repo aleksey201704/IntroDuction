@@ -55,9 +55,9 @@ public:
 		{
 			cout << "Правильная дробь" << endl;
 		}
-		else if (Correct.Numerator % Correct.Denominator != 0)
+		else 
 		{
-
+			cout << "Неправильная дробь";
 		}
 
 		return Correct;
